@@ -2,16 +2,19 @@
 
 - Deployment issues
 
-  - the host and port is hard coded in the event bus
+  - the host and port is hardcoded in the event bus
   - scale services to multiple machines
   - load balancing
 
-- Why docker
-  Contianers wrap up everything taht is needed for a program + how to start it
+- Why Docker
+  Containers wrap up everything that it needs for a program + how to start it.
 
-- why kubernetes
-  - what is kubernetes
-    - Kubernetes is a tool for runing a bunch of different containers
-    - we gitve some configuration to decribe how we want our containers to run and interact with each other
+- why Kubernetes
+  - what is Kubernetes
+    - Kubernetes is a tool for running a bunch of different containers
+    - we give some configuration to describe how we want our containers to run and interact with each other
   - concepts
-    - master: a program to manage everything in the cluster
+    - master: a program to manage everything inside the cluster
+    - Kubernetes forwards the request to a proper service
+  
+
