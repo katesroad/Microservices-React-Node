@@ -1,6 +1,8 @@
 # Orchestrating Collections of Services with Kubernetes
 
-- [Install Kubernetes on linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+- Install Kubernets on linux
+  - [Install Kubernetes on linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+  - [Install kuberbetes using minikube](https://minikube.sigs.k8s.io/docs/start/)
 - Whirlwind of Kubernetes
   - Terms of Kubernetes
     - Kubernetes Cluster: A collection of nodes + a master to manage them
