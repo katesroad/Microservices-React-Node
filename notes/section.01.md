@@ -3,7 +3,7 @@
 - what is microservices
   > 1.  A microservice should be self contained
   > 2.  To reduce the crashes chance brought by dependencies between services, we introduced the event bus.
-  > 3.  brought data duplication and understanding obstacle
+  > 3.  Brought data duplication and understanding obstacle
 
 It contains all the stuff that works one feature correctly.
 
@@ -42,9 +42,17 @@ Managing data between different services is a challenge.
 
 - A crazy way of storing data
 
-**Define the goal of the service first** ==> **Define the database structure**
+**Define the service's goal** ==> **Define the service's data schema** ==> **define the event flow for services**
 
 - For service D, the goal is
   > Given the ID of a user, show the title and image for every product they have erver ordered
   - pros and cons
     Nowdays, data storage is cheaper
+
+## Summary
+
+**Define the service's goal** ==> **Define the service's data schema** ==> **define the event flow for services**
+
+- Define the goal for services
+- Reduce dependency chances by data duplication and using event bus
+- microservice should be self contained and never, never reach database of another service.
