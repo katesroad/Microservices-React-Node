@@ -4,7 +4,9 @@
 
 - Whenever you start designing a service or putting it together, it is worth thinking very critically about exactly what your services want to do.
 
-  - The goal of post service
+## The services and solutions for the blog app
+
+- The goal of post service
 
 | path    | method | body?          | goal                  |
 | ------- | ------ | -------------- | --------------------- |
@@ -43,12 +45,25 @@ type CommentEvent = {
 - Solutions for adding a moderation service
 
   - Option One: send comment event from moderation to query service
-    > 1.  cons: what if the moderation operation handled by human?
-  - Option Two: send comment both to moderation service and query service.
+    > 1.  cons: what if the moderation operation handled by a human?
+  - Option Two: send the comment both to the moderation service and query service.
 
     - cons
-      - The query service for presentation only purpose, it should invovle in much logic handling
       - There could be many event sources for comment
+      - We require a presentation services to have a deeper understanding of logic
 
   - Option three:
-    - cons
+    make the comment to handle comments related business logic handling
+    > 1.  Domain related event
+    > 2.  Generic event
+    - pros
+      - the query service only care about **update** event, compared with caring about a bunch of events
+
+**Notice here, the comment service keeps the full data of comments**, we have a palce that stores the **integral comment data**.
+
+- handle service failure or services brought in the future
+
+  1.  Sync request
+  2.  Directly database access(what if post and comment services using different type database, we will bring query handling inside the query service)
+
+  3.  **Store Event**(real world solution) at the event-bus service
