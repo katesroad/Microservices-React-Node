@@ -1,8 +1,6 @@
 # The Blog App
 
-## Some good habits to have when working with microservices
-
-- Whenever you start designing a service or putting it together, it is worth thinking very critically about exactly what your services want to do.
+**Whenever you start designing a service or putting it together, it is worth thinking very critically about exactly what your services want to do.**
 
 ## The services and solutions for the blog app
 
@@ -50,7 +48,7 @@ type CommentEvent = {
 
     - cons
       - There could be many event sources for comment
-      - We require a presentation services to have a deeper understanding of logic
+      - We are requiring a presentation services to have a deeper understanding of logic
 
   - Option three:
     make the comment to handle comments related business logic handling
@@ -61,7 +59,7 @@ type CommentEvent = {
 
 **Notice here, the comment service keeps the full data of comments**, we have a palce that stores the **integral comment data**.
 
-- handle service failure or services brought in the future
+- handle services down time or services brought in the future
 
   1.  Sync request
   2.  Directly database access(what if post and comment services using different type database, we will bring query handling inside the query service)
