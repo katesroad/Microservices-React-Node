@@ -10,3 +10,6 @@
     - Pod: More or less a running container. Technically, a pod can run multiple containers
     - Deployment: Monitors a set of pods, make sure they are running, and restarts them if they crash
     - Services: Provides an easy to remember URL to access a running container
+- Introduction to [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+  - Manage the containers inside a Pod
+  - To switch the new version of pod
