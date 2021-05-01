@@ -31,6 +31,7 @@
   - type definition files: a kind of adapter between typescript and javascript.
     - sometimes, type definition files are stored automatically in library code; sometimes it may not contain the type definition file
     - not export default ints is a convention. The reason to do so is to avoid worrying about including {} or not.
+- _private_ modifier
 
 ## Appendix
 
@@ -38,3 +39,6 @@
 
   - Global namespace by default
   - **Here, we’ll split our Validation namespace across many files. Even though the files are separate, they can contribute to the same namespace and be consumed as if they were all defined in one place.** By adding a reference tag to tell the compiler about the relationships between files.
+  - [type vs interface in ts](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces)
+    - most cases they are exchangeable
+    - extendable
