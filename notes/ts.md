@@ -47,6 +47,18 @@ type mappable = Company | People; //the operatable properties are the intesectio
 
   - Global namespace by default
   - **Here, we’ll split our Validation namespace across many files. Even though the files are separate, they can contribute to the same namespace and be consumed as if they were all defined in one place.** By adding a reference tag to tell the compiler about the relationships between files.
-  - [type vs interface in ts](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces)
-    - most cases they are exchangeable
-    - extendable
+
+- [type vs interface in ts](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces)
+  - most cases they are exchangeable
+  - extendable
+- Interface
+  Typescript check if an oject is an instance of
+
+  ```ts
+  interface Mappable {
+    location: {
+      lat: number;
+      lng: number;
+    };
+  }
+  ```
