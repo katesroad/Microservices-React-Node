@@ -16,6 +16,26 @@
 - Type annotation and interfaces
   - type annotation: code we add to tell typescript what type of value a variable will refer to(We tell typescript the type)
   - type reference: typescript tries to figure out what type of a value a variable refers to(Typescript guesses the type)
+- Interfaces around functions
+
+  > 1.  the input type
+  > 2.  the out put type
+  > 3.  Annoation for anynomous functions
+
+- void and never
+  - voide
+  ```ts
+  <!-- not return anything -->
+  const func = (): void => {
+    console.log("hello");
+  };
+  ```
+  ```ts
+  const func = (): never => {
+    throw new Error("never reach the end of the func");
+  };
+  ```
+  - [never vs void](https://stackoverflow.com/questions/37910669/what-is-the-difference-between-never-and-void-in-typescript)(either throwing an exception or failing to terminate.)
 - Annotation with variables
 
   - why we write the type annotation manually?
