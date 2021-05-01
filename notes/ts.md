@@ -52,7 +52,7 @@ type mappable = Company | People; //the operatable properties are the intesectio
   - most cases they are exchangeable
   - extendable
 - Interface
-  Typescript check if an oject is an instance of
+  Typescript checks if an object is an instance of an interface implicitly
 
   ```ts
   interface Mappable {
@@ -60,5 +60,18 @@ type mappable = Company | People; //the operatable properties are the intesectio
       lat: number;
       lng: number;
     };
+    markerConent(): string;
+  }
+
+  class CustomMap {
+    private map;
+
+    counstructor(mappable:Mappable) {
+      <!-- some other code -->
+    }
+
+    markerContent(mappable:Mappable) {
+      <!-- something with the content -->
+    }
   }
   ```
