@@ -33,6 +33,14 @@
     - not export default ints is a convention. The reason to do so is to avoid worrying about including {} or not.
 - _private_ modifier
 
+- a | b
+
+```ts
+const Company = { name: string, location: Location };
+const People = { name: string, age: number, location: Location };
+type mappable = Company | People; //the operatable properties are the intesection ones
+```
+
 ## Appendix
 
 - [Namespacing in ts](https://www.typescriptlang.org/docs/handbook/namespaces.html)
