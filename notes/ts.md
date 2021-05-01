@@ -22,6 +22,9 @@
   > 2.  the out put type
   > 3.  Annoation for anynomous functions
 
+- [Tuples](https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple)
+  Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not be the same. For example, you may want to represent a value as a pair of a string and a number
+
 - void and never
   - voide
   ```ts
