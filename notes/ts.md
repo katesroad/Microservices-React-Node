@@ -24,8 +24,8 @@
     - **Avoid variables with any at all costs** as typescript can't do type checking with any type variable.
   - Delayed initialzation
 
-- type defination file
+- **type defination file** <br>
   typescript use types to check our code. If typescript doesn't have this information. when using Javascript code, there is no type provided, so typescript can't figure out what kind of different types of values are flooding around javascript code.
   - type defination files: a kind of adapater between typescript and javascript.
     - sometimes, type defination files are stored automatically in library code, sometimes it may not contain the type defination file
-    - 
+    - not export default in ts is a convention. The reason to do so is to avoid worrying to include {} or not.
