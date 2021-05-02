@@ -32,6 +32,23 @@
   Usually, we don't create pods. we create deployment
 
 - Introduction to [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-  - Manage the containers inside a Pod
-  - To switch the new version of pod(CI/CD)
-  - manage a group of pods
+
+  - why and what is pod
+    - Manage the containers inside a Pod
+    - To switch the new version of image(CI/CD)
+    - manage a group of pods
+  - updating pod
+    - #1 Build new images and update the k8s config file. Then run apply configure file again
+      - created => configured
+      - Every change may bring error, it would be great to tell kubernets always to use the latest version of images
+    - #2
+      - register docker and login in your docker from your local terminal
+      - rebuild latest image
+      - push image to docker hub
+      ```sh
+      docker push dockeraccount/repo:tag
+      ```
+      - rollout the deployment
+      ```sh
+      kubectl rollout restart [deployment name]
+      ```

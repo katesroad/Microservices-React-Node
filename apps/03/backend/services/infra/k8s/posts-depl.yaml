@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: posts
-        image: kate/posts:0.0.1
+        image: dockeridohyeah/posts:latest
         resources:
           limits:
             memory: "128Mi"
