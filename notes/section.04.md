@@ -17,16 +17,19 @@
     - Config file
       - run x copies of pods
       - Please allow copies of posts to be accessiable from network
-  - commands with pod
+
+- [Pod](https://kubernetes.io/docs/concepts/workloads/pods/):Pods are the smallest deployable units of computing that you can create and manage in Kubernetes. A Pod (as in a pod of whales or pea pod) is a group of one or
+
+  - commands with Pood
     | command | opeation|
     | ----------- | ----------- |
     | kubecetl exec -it posts sh |go inside the pod container|
     |kubectl log posts| show logs|
     | kubcetl delete posts | delete pod|
     | kubectl apply -f conf file| start the pod|
-    |kubectl describe pod posts |get pod's inforamation|
+    |kubectl describe pod posts |get pod's inforamation|more containers is a group. <br>
 
-Usually, we don't create pods. we create deployment
+  Usually, we don't create pods. we create deployment
 
 - Introduction to [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
   - Manage the containers inside a Pod
