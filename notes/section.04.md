@@ -26,6 +26,9 @@
     | kubectl apply -f conf file| start the pod|
     |kubectl describe pod posts |get pod's inforamation|
 
+Usually, we don't create pods. we create deployment
+
 - Introduction to [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
   - Manage the containers inside a Pod
-  - To switch the new version of pod
+  - To switch the new version of pod(CI/CD)
+  - manage a group of pods
