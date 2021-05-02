@@ -7,6 +7,7 @@
     - minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
 
 - Whirlwind of Kubernetes
+
   - Terms of Kubernetes
     - Kubernetes Cluster: A collection of nodes + a master to manage them
     - Node: a virtual machine that will run our containers
@@ -16,6 +17,15 @@
     - Config file
       - run x copies of pods
       - Please allow copies of posts to be accessiable from network
+  - commands with pod
+    | command | opeation|
+    | ----------- | ----------- |
+    | kubecetl exec -it posts sh |go inside the pod container|
+    |kubectl log posts| show logs|
+    | kubcetl delete posts | delete pod|
+    | kubectl apply -f conf file| start the pod|
+    |kubectl describe pod posts |get pod's inforamation|
+
 - Introduction to [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
   - Manage the containers inside a Pod
   - To switch the new version of pod
