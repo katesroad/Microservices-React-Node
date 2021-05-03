@@ -36,3 +36,13 @@
   - #option 2
     - Auth service is down? who cares
     - Some user got banned? Darn, i just gave them the keys to my cars 5 minutes ago
+
+Hybrid async and sync communication
+
+- How to get rid of the big issue of the option2: <br>
+  - **JWT token and refresh token**(window time is acceptable)
+    - the shared authentication lib requests the auth service with refresh token
+    - order rejects the request, client requests the token with new token refreshed from auth service
+  - Window time is unbearable
+    - reflect the authentication change => send user baned event to other services
+    - persist the baned users cache inside the authentication required services(build it to a shared library)
