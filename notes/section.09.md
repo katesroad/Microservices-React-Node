@@ -2,7 +2,9 @@
 
 - User auth with microservice is an unresolved problem
 - there are many ways to do it, and no one-ways are right
-- solutions
+
+- solution Options
+
   - #1. Allow sync request from other services to auth service: ** Request => Order Service => Auth Service**
     - downside
       - what if the auth service is down? Auth service is down => other services that rely on it has no idea if the user is authenticated or not
@@ -14,3 +16,13 @@
     - downside:
       - we are going to end up authentication duplication => move the duplication to a shared library
       - Communication between microservices is challenging
+
+- Option 2
+  - downside
+    - interaction with auth service
+      - step one
+        - request -> auth service
+        - auth service -> token and other data required
+      - step two request -> order service
+        - ban the user who has already logined in
+        - even if the user is banded, the JWT token is still valid
