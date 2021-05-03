@@ -46,3 +46,5 @@ Hybrid async and sync communication
   - Window time is unbearable
     - reflect the authentication change => send user baned event to other services
     - persist the baned users cache inside the authentication required services(build it to a shared library)
+- Secret storage with Kubernetes
+  - Video 167
