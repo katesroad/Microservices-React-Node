@@ -24,5 +24,15 @@
         - request -> auth service
         - auth service -> token and other data required
       - step two request -> order service
-        - ban the user who has already logined in
+    - interaction with order service
+      - steps
+        - after baning the user who has already logined in at the auth service
         - even if the user is banded, the JWT token is still valid
+      - solution
+- compare option 1 to option two
+  - #option 1
+    - change to auth state are immdiately reflected to other services
+    - auth services goes down? Entier app is broken
+  - #option 2
+    - Auth service is down? who cares
+    - Some user got banned? Darn, i just gave them the keys to my cars 5 minutes ago
