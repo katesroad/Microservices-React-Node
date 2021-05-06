@@ -52,11 +52,16 @@
       ```sh
       kubectl rollout restart [deployment name]
       ```
+  - [assign pods to node](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) <br>
+    You can constrain a Pod so that it can only run on particular set of Node(s).
 
 - [networking service](https://kubernetes.io/docs/concepts/services-networking/service/) <br>
   Services provide networking between pods
+
   - types of services
     - Cluster IP: Setup an easy to remember URL to access a pod, only expose pods in the cluster
     - Node Port: Make a pod accessible outside of the cluster. usually, only used for dev purpose
     - Load balancer: Make a pod accessibale from outside of the cluster. This is the right way to expose a pod t othe outside world
     - External Name: Redirects an in-cluster request to a CNAME url
+
+- ## Skaffold
