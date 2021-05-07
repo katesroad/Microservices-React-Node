@@ -1,10 +1,13 @@
 # Microservices, React and Node
 
+
 ## Goal
 
 - Get a taste of a microservices acrchitecture
 - Build as much as possible from stratch
 
+## Better tutorial 
+https://kubernetes.io/docs/tutorials/kubernetes-basics/
 ## Notes
 
 - [Fundamental Ideas Around Microservices](./notes/section.01.md)
