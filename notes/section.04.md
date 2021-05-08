@@ -50,7 +50,7 @@
       ```
       - rollout the deployment
       ```sh
-      kubectl rollout restart [deployment name]
+      kubectl rollout restart deployment [name]
       ```
   - [assign pods to node](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) <br>
     You can constrain a Pod so that it can only run on particular set of Node(s).
@@ -67,4 +67,3 @@
 - colocated deployment with service in a deployment yaml file
 
 - ## Skaffold
-  SDqww`qwrt345
