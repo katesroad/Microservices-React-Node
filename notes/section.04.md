@@ -20,7 +20,7 @@
 
 - [Pod](https://kubernetes.io/docs/concepts/workloads/pods/):Pods are the smallest deployable units of computing that you can create and manage in Kubernetes. A Pod (as in a pod of whales or pea pod) is a group of one or
 
-  - commands with Pood
+  - commands with Pod
     | command | opeation|
     | ----------- | ----------- |
     | kubecetl exec -it posts sh |go inside the pod container|
