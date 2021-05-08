@@ -1,34 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: posts-depl # naming  convention
+  name: event-bus-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: posts # Help it to find specs
+      app: event-bus 
   template:
     metadata:
       labels:
-        app: posts
-    # pod spec
+        app: event-bus
     spec:
       containers:
-      - name: posts
-        image: dockeridohyeah/posts:latest
+      - name: event-bus
+        image: dockeridohyeah/event-bus:latest
         resources:
           limits:
             memory: "128Mi"
-            cpu: "500m"
+            cpu: "100m"
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: posts-clusterip-srv
+  name: event-bus-srv
 spec:
   selector:
-    app: posts
+    app: event-bus
   ports:
-  - port: 4000
-    targetPort: 4000
+  - port: 4005
+    targetPort: 4005
