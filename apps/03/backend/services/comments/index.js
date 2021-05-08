@@ -66,5 +66,5 @@ app.post("/events", async (req, res) => {
 });
 
 app.listen(4001, () => {
-  console.log("Listening on 4001");
+  console.log("Comment service is listening on 4001");
 });

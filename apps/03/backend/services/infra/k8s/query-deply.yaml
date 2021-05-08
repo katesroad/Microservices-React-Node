@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: query
+  name: query-srv
 spec:
   selector:
     app: query 
