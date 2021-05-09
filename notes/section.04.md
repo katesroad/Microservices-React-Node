@@ -90,4 +90,8 @@
       minikube addons enable ingress
       ```
 
-- ## Skaffold
+- [Skaffold](https://skaffold.dev/)
+  - for deployment in production <br>
+    build image -> upload image -> rollout start deployment
+  - for deployment in development <br>
+    that is cumbersome
