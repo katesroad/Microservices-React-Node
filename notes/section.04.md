@@ -66,4 +66,19 @@
 
 - colocated deployment with service in a deployment yaml file
 
+- React app want to access endpoint to multiple services
+
+  - Problem and solutions
+    - NodePort port value is generated randomly
+    - route the request to a specified port
+  - Terms
+    - Load Balancer Service <br>
+      Tells K8s to reach out to its provider and provision a load balancer. Gets traffict into a single pod
+    - Ingress or Ingress Controlloer <br>
+      A pod with a set of routing rules to distribute traffic to other services
+
+- Load balancer services and Ingress
+
+  -
+
 - ## Skaffold
