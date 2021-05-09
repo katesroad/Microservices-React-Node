@@ -81,26 +81,13 @@
 
   - [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress)
 
-  ```yamlapi
-    Version: networking.k8s.io/v1
-    kind: Ingress
-    metadata:
-      name: minimal-ingress
-      annotations:
-        nginx.ingress.kubernetes.io/rewrite-target: /
-    spec:
-      rules:
-      - http:
-          paths:
-          - path: /testpath
-            pathType: Prefix
-            backend:
-              service:
-                name: test
-                port:
-                  number: 80
-  ```
-
   - [ingress-nginx](https://github.com/kubernetes/ingress-nginx)
+
+    - [basic usage](https://kubernetes.github.io/ingress-nginx/user-guide/basic-usage/#basic-usage-host-based-routing)
+
+    - setup for ubuntu
+    - ```sh
+      minikube addons enable ingress
+      ```
 
 - ## Skaffold
