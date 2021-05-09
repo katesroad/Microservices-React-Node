@@ -1,0 +1,42 @@
+apiVersion: skaffold/v2beta15
+kind: Config
+metadata:
+  name: services
+build:
+  local:
+    # disable pushing to dockerhub automatically
+    push: false
+  artifacts:
+    - image: dockeridohyeah/comments
+      # directory and make sure our pod always has the latest code
+      context: comments
+      docker:
+        dockerfile: Dockerfile
+    - image: dockeridohyeah/event-bus
+      context: event-bus
+      docker:
+        dockerfile: Dockerfile
+    - image: dockeridohyeah/moderation
+      context: moderation
+      docker:
+        dockerfile: Dockerfile
+    - image: dockeridohyeah/posts
+      context: posts
+      docker:
+        dockerfile: Dockerfile
+    - image: dockeridohyeah/query
+      context: query
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  kubectl:
+    # watch all these different yaml files
+    # anytime the config file changes, skaffold will apply changed files automatically
+    manifests:
+      - infra/k8s/comments-deply.yaml
+      - infra/k8s/event-bus-depl.yml
+      - infra/k8s/ingress-srv.yaml
+      - infra/k8s/moderation-deply.yaml
+      - infra/k8s/posts-depl.yaml
+      - infra/k8s/posts-srv.yaml
+      - infra/k8s/query-deply.yaml
