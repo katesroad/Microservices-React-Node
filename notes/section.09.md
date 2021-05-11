@@ -46,5 +46,11 @@ Hybrid async and sync communication
   - Window time is unbearable
     - reflect the authentication change => send user baned event to other services
     - persist the baned users cache inside the authentication required services(build it to a shared library)
-- Secret storage with Kubernetes
-  - Video 167
+- [Secret storage with Kubernetes](https://kubernetes.io/docs/concepts/configuration/secret/)
+  - Video 167: Securely Stroing Secrets with Kubernetes
+
+```sh
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
+```
+
+- Video 169: Accessing Env variable sin a Pod
